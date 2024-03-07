@@ -24,7 +24,7 @@ Source100:	golang-package-dependencies.sh
 %endif
 URL:		https://github.com/rclone/rclone
 License:	GPL
-Group:		Development/Other
+Group:		Networking/Other
 BuildRequires:	compiler(go-compiler)
 %if ! %{with bootstrap2}
 BuildRequires:	golang(bazil.org/fuse)
