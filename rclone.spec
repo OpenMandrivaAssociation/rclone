@@ -8,7 +8,7 @@
 # https://github.com/rclone/rclone
 %global goipath		github.com/rclone/rclone
 %global forgeurl	https://github.com/rclone/rclone
-Version:		1.67.0
+Version:		1.68.0
 
 %gometa
 
