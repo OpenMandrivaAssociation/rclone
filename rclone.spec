@@ -20,11 +20,11 @@ Source0:	https://github.com/rclone/rclone/archive/v%{version}/rclone-%{version}.
 %if %{with bootstrap2}
 # Generated from Source100
 Source3:	%{name}-%{version}-vendor.tar.gz
-Source100:	golang-package-dependencies.sh
+#Source100:	golang-package-dependencies.sh
 %endif
 URL:		https://github.com/rclone/rclone
-License:	GPL
-Group:		Networking/Other
+License:	MIT AND BSD-3-Clause
+Group:		Backup
 BuildRequires:	compiler(go-compiler)
 %if ! %{with bootstrap2}
 BuildRequires:	golang(bazil.org/fuse)
