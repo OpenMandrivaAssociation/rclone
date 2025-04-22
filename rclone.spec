@@ -8,7 +8,7 @@
 # https://github.com/rclone/rclone
 %global goipath		github.com/rclone/rclone
 %global forgeurl	https://github.com/rclone/rclone
-Version:		1.68.2
+Version:		1.69.1
 
 %gometa
 
@@ -19,7 +19,7 @@ Release:	1
 Source0:	https://github.com/rclone/rclone/archive/v%{version}/rclone-%{version}.tar.gz
 %if %{with bootstrap2}
 # Generated from Source100
-Source3:	vendor.tar.zst
+Source3:	%{name}-%{version}-vendor.tar.gz
 Source100:	golang-package-dependencies.sh
 %endif
 URL:		https://github.com/rclone/rclone
