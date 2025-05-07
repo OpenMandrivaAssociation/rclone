@@ -8,7 +8,7 @@
 # https://github.com/rclone/rclone
 %global goipath		github.com/rclone/rclone
 %global forgeurl	https://github.com/rclone/rclone
-Version:		1.69.1
+Version:		1.69.2
 
 %gometa
 
@@ -228,7 +228,7 @@ storage providers.
 %{_sbindir}/mount.%{name}
 %{_mandir}/man1/%{name}.1*
 %{_datadir}/bash-completion/completion/%{name}
-#{_datadir}/fish-completion/completion/%{name}.fish
+# {_datadir}/fish-completion/completion{name}.fish
 %{_datadir}/zsh-completion/completion/_%{name}
 
 #-----------------------------------------------------------------------
