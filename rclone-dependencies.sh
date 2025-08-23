@@ -32,6 +32,7 @@ go mod vendor
 # find vendor
 tar cf ../vendor.tar vendor
 zstd --ultra -22 --rm -f ../vendor.tar
+cp go.sum ../
 
 popd 1>/dev/null
 rm -rf repository $DIR
