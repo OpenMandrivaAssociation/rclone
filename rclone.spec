@@ -20,7 +20,7 @@ Source0:	https://github.com/rclone/rclone/archive/v%{version}/rclone-%{version}.
 %if %{with bootstrap2}
 # Generated from Source100
 Source3:	vendor.tar.zst
-# Source4:	go.sum
+Source4:	go.sum
 #Source100:	golang-package-dependencies.sh
 %endif
 URL:		https://github.com/rclone/rclone
@@ -252,14 +252,14 @@ building other packages which use import path with
 export LC_ALL=C.utf-8
 %autosetup -p1 -n rclone-%{version}
 # After 1.69.2 go.sum throws checksum error. Deleting file and running go mod tidy recreates the go.sum file
-# rm -rf go.sum
+rm -rf go.sum
 # added go mod tiny to script
-# rm -rf vendor
-# cp %{S:4} %{builddir}
+rm -rf vendor
+cp %{S:4} %{builddir}
 
 
 %if %{with bootstrap2}
-tar xf %{S:3}
+tar xvf %{S:3}
 %endif
 
 %build
