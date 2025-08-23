@@ -25,9 +25,11 @@ DIR="`echo $PKG |sed -e "s,\.tar.*,," |xargs echo`"
 tar xf $PKG
 
 pushd $DIR 1>/dev/null
+rm -rf go.sum
+go mod tidy
 go mod vendor
 
-find vendor
+# find vendor
 tar cf ../vendor.tar vendor
 zstd --ultra -22 --rm -f ../vendor.tar
 
