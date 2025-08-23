@@ -256,11 +256,11 @@ export LC_ALL=C.utf-8
 # added go mod tiny to script
 # rm -rf vendor
 # cp %{S:4} %{builddir}
+
+
+%if %{with bootstrap2}
 tar xf %{S:3}
-
-# %if %{with bootstrap2}
-
-# %endif
+%endif
 
 %build
 %gobuildroot
