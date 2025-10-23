@@ -25,8 +25,7 @@ DIR="`echo $PKG |sed -e "s,\.tar.*,," |xargs echo`"
 tar xf $PKG
 
 pushd $DIR 1>/dev/null
-rm -rf go.sum
-go mod tidy
+export GOPROXY=https://proxy.golang.org,direct
 go mod vendor
 
 # find vendor
