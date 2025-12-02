@@ -1,3 +1,3 @@
 sources:
-  rclone-1.71.2.tar.gz: fed26c6b75a23e7fbaaa4a131d31d836093c273b
-  vendor.tar.zst: 58e707372a98d6c6a1127640782e50f989893c96
+  rclone-1.72.0.tar.gz: 4672857c76d1e30b1ac501f130278145246440ea
+  vendor.tar.zst: dd03fd848b97292dbee48e59cf2c241a28f83c39
