@@ -8,9 +8,9 @@
 # https://github.com/rclone/rclone
 %global goipath		github.com/rclone/rclone
 %global forgeurl	https://github.com/rclone/rclone
-Version:		1.72.1
+Version:		1.74.4
 
-%gometa
+#%gometa
 
 Summary:	Rsync for cloud storage
 Name:		rclone
