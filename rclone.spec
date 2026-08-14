@@ -8,7 +8,7 @@
 # https://github.com/rclone/rclone
 %global goipath		github.com/rclone/rclone
 %global forgeurl	https://github.com/rclone/rclone
-Version:		1.74.4
+Version:		1.75.0
 
 #%gometa
 
@@ -223,14 +223,14 @@ storage providers.
 %files
 %license COPYING
 %doc MAINTAINERS.md MANUAL.html RELEASE.md CONTRIBUTING.md MANUAL.md README.md
-%doc docs/
+#%doc docs/
 %{_bindir}/%{name}
 %{_bindir}/%{name}fs
 %{_sbindir}/mount.%{name}
 %{_mandir}/man1/%{name}.1*
-%{_datadir}/bash-completion/completion/%{name}
+%{_datadir}/bash-completion/completions/%{name}
 # {_datadir}/fish-completion/completion{name}.fish
-%{_datadir}/zsh-completion/completion/_%{name}
+%{_datadir}/zsh-completion/completions/_%{name}
 
 #-----------------------------------------------------------------------
 
@@ -285,13 +285,13 @@ done
 install -Dpm 0644 ./rclone.1 %{buildroot}%{_mandir}/man1/rclone.1
 
 # completions
-install -Dpm 0644 %{name}.bash %{buildroot}%{_datadir}/bash-completion/completion/%{name}
+install -Dpm 0644 %{name}.bash %{buildroot}%{_datadir}/bash-completion/completions/%{name}
 #install -Dpm 0644 %{name}.fish %{buildroot}%{_datadir}/bash-completion/completion/%{name}.fish
-install -Dpm 0644 %{name}.zsh  %{buildroot}%{_datadir}/zsh-completion/completion/_%{name}
+install -Dpm 0644 %{name}.zsh  %{buildroot}%{_datadir}/zsh-completion/completions/_%{name}
 
 # https://rclone.org/commands/rclone_mount/#rclone-as-unix-mount-helper
-	
-install -Dpm 0755 -d %{buildroot}%{_bindir}
+
+#install -Dpm 0755 -d %{buildroot}%{_bindir}
 ln -rs %{buildroot}%{_bindir}/rclone %{buildroot}%{_sbindir}/mount.rclone
 ln -rs %{buildroot}%{_bindir}/rclone %{buildroot}%{_bindir}/rclonefs
 
